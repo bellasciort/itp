@@ -1,0 +1,171 @@
+# Midterm 
+
+
+First, I used the midterm demo used to help upload and play our first sound on the screen. Then, I was able to figure out through the assistance of our Professor that the code must then start with "let mySounds" in order to ensure all sounds are uploaded and able to put into the editor p5js. 
+
+I have been able to get the sounds to play individually as I add each code, but I am trying to make sure I am able to put the code so that I can do the first, second, and then the third sound in order this way it is seamless for class presentation tomorrow. 
+
+I have this as my full code so far: 
+let mySounds = [];
+
+function preload() {
+  soundFormats('wav', 'mp3');  
+  mySounds.push(loadSound('ny_mus120_electric_piano_4_F.wav'));
+  mySounds.push(loadSound('synth2.wav'));
+  mySounds.push(loadSound('phone3.wav'));
+}
+function setup() {
+  createCanvas(400, 200);
+  textSize(20);
+  textAlign(CENTER, CENTER);
+  text("Move your cursor to the 'Preview' section\nPress 'P' to play sound", width / 2, height / 2);
+}
+
+function soundLoaded() {
+  console.log("Sound successfully loaded!");
+}
+
+function keyPressed() {
+  console.log("Key pressed:", key);
+  if (key.toLowerCase() === 'p') {
+    playCustomSound();
+  }
+}
+
+function playCustomSound() {
+  if (myFirstSound.isLoaded()) {
+    myFirstSound.play();
+    console.log("Sound played.");
+  } else {
+    console.log("Sound not loaded yet.");
+  }
+}
+let myFirstSound;
+
+function preload() {
+  soundFormats('wav', 'mp3');  
+  myFirstSound = loadSound('ny_mus120_electric_piano_4_F.wav', soundLoaded);
+}
+
+function setup() {
+  createCanvas(400, 200);
+  textSize(20);
+  textAlign(CENTER, CENTER);
+  text("Move your cursor to the 'Preview' section\nPress 'P' to play sound", width / 2, height / 2);
+}
+
+function soundLoaded() {
+  console.log("Sound successfully loaded!");
+}
+
+function keyPressed() {
+  console.log("Key pressed:", key);
+  if (key.toLowerCase() === 'p') {
+    playCustomSound();
+  }
+}
+
+function playCustomSound() {
+  if (myFirstSound.isLoaded()) {
+    myFirstSound.play();
+    console.log("Sound played.");
+  } else {
+    console.log("Sound not loaded yet.");
+  }
+}
+function preload() {
+  soundFormats('wav', 'mp3');  
+  mySounds.push(loadSound('ny_mus120_electric_piano_4_F.wav'));
+  mySounds.push(loadSound('synth2.wav'));
+  mySounds.push(loadSound('phone3.wav'));
+}
+function setup() {
+  createCanvas(400, 200);
+  textSize(20);
+  textAlign(CENTER, CENTER);
+  text("Move your cursor to the 'Preview' section\nPress 'P' to play sound", width / 2, height / 2);
+}
+
+function soundLoaded() {
+  console.log("Sound successfully loaded!");
+}
+
+function keyPressed() {
+  console.log("Key pressed:", key);
+  if (key.toLowerCase() === 'p') {
+    playCustomSound();
+  }
+}
+
+function playCustomSound() {
+  if (myFirstSound.isLoaded()) {
+    myFirstSound.play();
+    console.log("Sound played.");
+  } else {
+    console.log("Sound not loaded yet.");
+  }
+}
+let mySecondSound;
+
+function preload() {
+  soundFormats('wav', 'mp3');  
+  myFirstSound = loadSound('synth2.wav', soundLoaded);
+}
+
+function setup() {
+  createCanvas(400, 200);
+  textSize(20);
+  textAlign(CENTER, CENTER);
+  text("Move your cursor to the 'Preview' section\nPress 'O' to play sound", width / 2, height / 2);
+}
+
+function soundLoaded() {
+  console.log("Sound successfully loaded!");
+}
+
+function keyPressed() {
+  console.log("Key pressed:", key);
+  if (key.toLowerCase() === 'o') {
+    playCustomSound();
+  }
+}
+
+let myThirdSound;
+
+function preload() {
+  soundFormats('wav', 'mp3');  
+  myFirstSound = loadSound('phone3.wav', soundLoaded);
+}
+function soundLoaded() {
+  console.log("Sound successfully loaded!");
+}
+
+function keyPressed() {
+  console.log("Key pressed:", key);
+  if (key.toLowerCase() === 'i') {
+    playCustomSound();
+  }
+}
+
+function playCustomSound() {
+  if (myThirdSound.isLoaded()) {
+    myThirdSound.play();
+    console.log("Sound played.");
+  } else {
+    console.log("Sound not loaded yet.");
+  }
+}
+
+
+Now, I am going to put this into ChatGpt to see what is wrong with the code, and ask it to edit so that each sound can play consecutively to the previous. 
+
+Here are the screenshots: 
+/Users/isabellasciortino/Desktop/Screenshot 2025-03-24 at 11.53.58 AM.png
+/Users/isabellasciortino/Desktop/Screenshot 2025-03-24 at 11.54.13 AM.png
+/Users/isabellasciortino/Desktop/Screenshot 2025-03-24 at 11.54.26 AM.png
+
+Through these edits and adjustments, I learned that the codes I had been writing were all wrong, and I was doing way too much work trying to write a new code for each sound, when I could program the code to the computer in one code to play each consecutively in playback. 
+
+This really assisted my understanding that sometimes too much fluff of information is bad for the computer, and confuses it. 
+
+Now, with the edited code, I have the perfect playback of all three sounds in one push of a button! 
