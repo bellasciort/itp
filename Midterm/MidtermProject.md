@@ -1,5 +1,5 @@
 # Midterm 
-
+## https://editor.p5js.org/bellasciort/full/Y2aY5sExE
 
 First, I used the midterm demo used to help upload and play our first sound on the screen. Then, I was able to figure out through the assistance of our Professor that the code must then start with "let mySounds" in order to ensure all sounds are uploaded and able to put into the editor p5js. 
 
